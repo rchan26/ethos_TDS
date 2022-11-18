@@ -10,3 +10,7 @@ dependencies:
   - matplotlib==3.6.2
   - seaborn==0.12.1
   - jupyter=1.0.0
+  - nltk=3.7
+  - gensim=4.2.0
+  - spacy=3.4.3
+  - scikit-learn==1.1.3
