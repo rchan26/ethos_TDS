@@ -18,6 +18,9 @@ spacy = "^3.4.3"
 gensim = "^4.2.0"
 scikit-learn = "^1.1.3"
 umap-learn = "^0.5.3"
+torch = "1.12.0"
+transformers = "^4.24.0"
+sentence-transformers = "^2.2.2"
 
 
 [build-system]

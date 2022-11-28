@@ -147,6 +147,8 @@ class KFolds:
         y_valid = self.y_data[valid_index]
         x_test = self.x_data[test_index]
         y_test = self.y_data[test_index]
+        
+        print(y_train.type())
 
         if as_DataLoader:
             train = TensorDataset(x_train, y_train)
@@ -388,6 +390,7 @@ def KFold_pytorch(
         "verbose_epoch": 100,
         "verbose_item": 10000,
     },
+    data_loader_args: dict = {"batch_size": 1, "shuffle": True},
 ) -> pd.DataFrame:
     """
     Performs KFold evaluation for a PyTorch model
@@ -441,7 +444,9 @@ def KFold_pytorch(
         criterion = checkpoint["criterion"]
 
         # obtain test, valid and test dataloaders
-        train, valid, test = folds.get_splits(fold_index=fold, as_DataLoader=True)
+        train, valid, test = folds.get_splits(fold_index=fold,
+                                              as_DataLoader=True,
+                                              data_loader_args=data_loader_args)
 
         # train pytorch model
         model = training_pytorch(
