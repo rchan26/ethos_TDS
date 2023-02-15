@@ -21,6 +21,7 @@ umap-learn = "^0.5.3"
 torch = "1.12.0"
 transformers = "^4.24.0"
 sentence-transformers = "^2.2.2"
+xgboost = "^1.7.1"
 
 
 [build-system]

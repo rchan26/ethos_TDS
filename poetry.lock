@@ -1886,10 +1886,30 @@ category = "main"
 optional = false
 python-versions = ">=3.7"
 
+[[package]]
+name = "xgboost"
+version = "1.7.1"
+description = "XGBoost Python Package"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+numpy = "*"
+scipy = "*"
+
+[package.extras]
+dask = ["dask", "distributed", "pandas"]
+datatable = ["datatable"]
+pandas = ["pandas"]
+plotting = ["graphviz", "matplotlib"]
+pyspark = ["cloudpickle", "pyspark", "scikit-learn"]
+scikit-learn = ["scikit-learn"]
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "2bc7fc68645ce944c8271a8eeb57102764a183fb21abde5dcc788797dd704298"
+content-hash = "99886bc241d90181bea5bb6995e3bca2841440ce2650b2fe08c14442dd35a4a2"
 
 [metadata.files]
 anyio = [
@@ -3519,4 +3539,12 @@ websocket-client = [
 widgetsnbextension = [
     {file = "widgetsnbextension-4.0.3-py3-none-any.whl", hash = "sha256:7f3b0de8fda692d31ef03743b598620e31c2668b835edbd3962d080ccecf31eb"},
     {file = "widgetsnbextension-4.0.3.tar.gz", hash = "sha256:34824864c062b0b3030ad78210db5ae6a3960dfb61d5b27562d6631774de0286"},
+]
+xgboost = [
+    {file = "xgboost-1.7.1-py3-none-macosx_10_15_x86_64.macosx_11_0_x86_64.macosx_12_0_x86_64.whl", hash = "sha256:373d8e95f2f0c0a680ee625a96141b0009f334e132be8493e0f6c69026221bbd"},
+    {file = "xgboost-1.7.1-py3-none-macosx_12_0_arm64.whl", hash = "sha256:91dfd4af12c01c6e683b0412f48744d2d30d6754e33b297e40845e2d136b3d30"},
+    {file = "xgboost-1.7.1-py3-none-manylinux2014_aarch64.whl", hash = "sha256:18b9fbad68d2af60737618072e77a43f88eec1113a143f9498698eb5db0d9c41"},
+    {file = "xgboost-1.7.1-py3-none-manylinux2014_x86_64.whl", hash = "sha256:e96305eb8c8b6061d83ac9fef25437e8ebc8d9c9300e75b8d07f35de1031166b"},
+    {file = "xgboost-1.7.1-py3-none-win_amd64.whl", hash = "sha256:fbe06896e1b12843c7f428ae56da6ac1c5975545d8785f137f73fd591c54e5f5"},
+    {file = "xgboost-1.7.1.tar.gz", hash = "sha256:bb302c5c33e14bab94603940987940f29203ecb8767a7a719daf579fbfaace64"},
 ]
